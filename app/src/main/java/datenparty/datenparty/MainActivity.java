@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 public class Main {
     public Main() {
         try {
-            Document d = Jsoup.connect("http://maschini.de:5001").get();
+            Document d = Jsoup.connect("https://api.n04h.de/datenparty").get();
             JSONParser parser = new JSONParser();
             JSONArray array = (JSONArray) parser.parse(d.getElementsByTag("body").text());
             array.forEach(System.out::println);
